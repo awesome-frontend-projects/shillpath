@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* orange shades */
+  --color-orange-50: #ff9500;
+  --color-orange-70: #ffbf66;
+  --color-orange-75: #ffca80;
+  --color-orange-80: #ffd499;
+  --color-orange-90: #ffeacc;
+  --color-orange-95: #fff4e5;
+  --color-orange-97: #fff9f0;
+  --color-orange-99: #fffdfa;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* White shades */
+  --color-white-90: #e4e4e7;
+  --color-white-95: #f1f1f3;
+  --color-white-97: #f7f7f8;
+  --color-white-99: #fcfcfd;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Grey shades */
+  --color-grey-10: #191919;
+  --color-grey-15: #262626;
+  --color-grey-20: #333333;
+  --color-grey-30: #4c4c4d;
+  --color-grey-35: #59595a;
+  --color-grey-40: #656567;
+  --color-grey-70: #b3b3b3;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white-97 text-grey-15;
+}
+
+@layer utilities {
+  .container {
+    @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1136px] 2xl:max-w-[1360px];
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  p {
+    @apply leading-normal text-sm sm:text-base lg:text-lg text-grey-30;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-semibold text-balance leading-tight;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  h4 {
+    @apply font-semibold text-xl lg:text-[22px];
+  }
+  .section {
+    @apply pt-20 lg:mt-32;
+  }
+  .card-wrapper {
+    @apply mt-14 lg:mt-16;
+  }
+  input {
+    @apply outline-none;
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply bg-orange-50 text-white px-6 py-4 rounded-lg hover:bg-orange-50/90 transition-colors inline-block;
+  }
+  .secondary-btn {
+    @apply px-6 py-4 bg-white border border-white-95 rounded-md hover:bg-orange-90 transition-colors inline-block;
+  }
+}
+
+/* Header */
+.navbar {
+  @apply fixed top-0 left-0 bg-white max-w-[320px] w-full h-screen p-6 flex flex-col rounded-tr-3xl rounded-br-3xl -translate-x-[320px] transition-transform duration-300 z-40;
+}
+.navbar.active {
+  @apply translate-x-0;
+}
+
+.overlay {
+  @apply fixed top-0 left-0 w-full h-screen bg-grey-15/70 opacity-0 pointer-events-none transition-opacity duration-300 z-30;
+}
+
+.overlay.active {
+  @apply opacity-100 pointer-events-auto;
 }
