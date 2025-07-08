@@ -120,7 +120,7 @@ const Header = () => {
               ))}
             </ul>
             {/* Lg Btn wrapper */}
-            <div className="flex gap-5">
+            <div className="flex gap-5 items-center">
               <Link
                 href="/signup"
                 aria-label="Sign up for an account"

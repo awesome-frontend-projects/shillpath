@@ -2,14 +2,16 @@
 import { heroLogos } from "@/data/data";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
-
+import ReactPlayer from "react-player";
 //import motion
 import { motion } from "motion/react";
 import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animation";
+import { RiPlayFill } from "@remixicon/react";
 
 const Hero = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <section>
       <motion.div
@@ -66,10 +68,10 @@ const Hero = () => {
             variants={fadeInUp}
             className="mt-12 flex gap-3 items-center justify-center flex-wrap"
           >
-            <Link href="#" className="primary-btn max-sm:w-[80%]">
+            <Link href="/courses" className="primary-btn max-sm:w-[80%]">
               Explore Courses
             </Link>
-            <Link href={"#"} className="secondary-btn max-sm:w-[80%]">
+            <Link href={"/pricing"} className="secondary-btn max-sm:w-[80%]">
               View Pricing
             </Link>
           </motion.div>
@@ -101,18 +103,30 @@ const Hero = () => {
           </motion.div>
         </div>
         {/* banner */}
-        <motion.figure
+        <motion.div
           variants={fadeIn}
-          className="mt-8 md:mt-14 lg:mt-[50px] max-w-[920px] w-full h-[500px] bg-orange-75 mx-auto rounded-br-[100px] rounded-tl-[100px]"
+          className="mt-8 md:mt-14 lg:mt-[50px] max-w-[920px] w-full h-[500px] mx-auto overflow-hidden relative rounded-xl"
         >
           <Image
-            src="/images"
-            alt="hero banner"
-            width={1312}
-            height={681}
-            priority
+            src="/images/hero-banner.png"
+            alt="hero-banner"
+            width={940}
+            height={500}
+            className="w-full h-full object-cover"
           />
-        </motion.figure>
+
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/20 z-10" />
+
+          <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer ">
+            <span
+              className="w-16 h-16 bg-white rounded-full player-btn flex justify-center items-center"
+              aria-label="play video"
+            >
+              <RiPlayFill size={30} aria-hidden="true" focusable="false" />
+            </span>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );
