@@ -120,22 +120,13 @@ const Header = () => {
               ))}
             </ul>
             {/* Lg Btn wrapper */}
-            <div className="flex gap-5 items-center">
-              <Link
-                href="/signup"
-                aria-label="Sign up for an account"
-                className="primary-btn"
-              >
-                Sign Up
-              </Link>
-              <Link
-                href="/login"
-                aria-label="Log in to your account"
-                className="secondary-btn"
-              >
-                Login
-              </Link>
-            </div>
+            <Link
+              href="/login"
+              aria-label="Log in to your account"
+              className="px-8 bg-orange-50 text-white py-4 rounded-lg hover:bg-orange-50/80 transition-colors"
+            >
+              Login
+            </Link>
           </div>
           {/* Menu Icon */}
           <button

@@ -107,7 +107,7 @@ const LoginForm = () => {
             <div className="flex items-center justify-center gap-2 mt-5">
               <p>Don’t have an account?</p>
               <Link
-                href="#"
+                href="/signup"
                 className="flex items-center gap-1 hover:underline"
               >
                 {" "}
