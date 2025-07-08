@@ -117,7 +117,6 @@ const Hero = () => {
 
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/20 z-10" />
-
           <div className=" absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer ">
             <span
               className="w-16 h-16 bg-white rounded-full player-btn flex justify-center items-center"
