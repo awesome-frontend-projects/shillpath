@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
-import ReactPlayer from "react-player";
 //import motion
 import { motion } from "motion/react";
 import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animation";

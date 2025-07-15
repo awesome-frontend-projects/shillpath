@@ -59,7 +59,7 @@ const Benefits = () => {
               <Link
                 href="#"
                 aria-label="see benefit"
-                className="bg-white-99 text-orange-50 border border-white-95 rounded-md flex mt-auto h-14 w-14 items-center justify-center ml-auto hover:bg-orange-50 transition-colors text hover:text-white"
+                className="bg-white-99 text-orange-50 border border-white-95 rounded-md flex mt-auto h-14 w-14 items-center justify-center ml-auto hover:bg-orange-50 transition-colors hover:text-white"
               >
                 <RiArrowRightUpLine
                   size={26}

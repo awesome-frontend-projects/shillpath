@@ -23,7 +23,7 @@ const Header = () => {
           aria-label="Free course announcement"
           className="bg-orange-50 text-white text-center flex items-center justify-center gap-3 rounded-md px-4 py-2.5 flex-wrap"
         >
-          <a href="#" className="hover:underline">
+          <a href="#" className="hover:underline text-sm">
             Free Courses 🌟 Sale Ends Soon, Get It Now
           </a>
           <button

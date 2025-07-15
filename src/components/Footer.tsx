@@ -16,7 +16,6 @@ const Footer = () => {
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
         className="container"
       >
         {/* Footer top */}
@@ -83,9 +82,7 @@ const Footer = () => {
                   key={icon.id}
                   className="secondary-btn bg-white-97 hover:shadow-md hover:bg-white-99 transition-all"
                 >
-                  <a href="#" className="">
-                    {<icon.icon />}
-                  </a>
+                  <a href="#">{<icon.icon />}</a>
                 </button>
               ))}
             </div>

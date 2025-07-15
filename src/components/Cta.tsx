@@ -37,8 +37,8 @@ const Cta = () => {
             src="/images/cta-bg-img.png"
             alt="cta-bg-img"
             width={362}
-            height={280}
-            className="absolute top-0 right-20 overflow-hidden -z-10"
+            height={680}
+            className="h-full absolute top-0 right-20 overflow-hidden -z-10 object-cover"
           />
         </div>
       </motion.div>
