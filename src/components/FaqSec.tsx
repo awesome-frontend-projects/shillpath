@@ -39,7 +39,7 @@ const FaqSec = () => {
               <motion.div variants={fadeInUp} key={item.id}>
                 {/* Title */}
                 <div className="flex items-center justify-between gap-12 md:px-5 py-3 border-b border-b-white-95">
-                  <h4>{item.title}</h4>
+                  <h3>{item.title}</h3>
                   <button
                     aria-label="open question"
                     className="w-10 h-10 bg-orange-75 flex items-center justify-center rounded-lg aspect-square"

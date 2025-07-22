@@ -51,7 +51,7 @@ const Benefits = () => {
               </figure>
               {/* content */}
               <div className="mb-4 text-center">
-                <h4>{item.title}</h4>
+                <h3>{item.title}</h3>
                 <p className="mt-3.5">{item.text}</p>
               </div>
 

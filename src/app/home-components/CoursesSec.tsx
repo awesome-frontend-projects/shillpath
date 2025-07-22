@@ -64,7 +64,7 @@ const CoursesSec = () => {
                 </div>
                 {/* meta data */}
                 <div className="my-6">
-                  <h4 className="mb-1.5">{item.title}</h4>
+                  <h3 className="mb-1.5">{item.title}</h3>
                   <p>{item.text}</p>
                 </div>
               </div>

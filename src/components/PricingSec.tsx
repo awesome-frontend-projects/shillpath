@@ -89,7 +89,7 @@ const PricingSec = () => {
               </div>
               {/* list */}
               <div className="grid gap-4 mb-8">
-                <h4 className="text-center">{item.title}</h4>
+                <h3 className="text-center">{item.title}</h3>
                 <ul className="grid gap-5">
                   {item.list.map((item, index) => (
                     <li key={index} className="flex items-center gap-2.5">
