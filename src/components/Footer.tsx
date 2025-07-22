@@ -82,7 +82,9 @@ const Footer = () => {
                   key={icon.id}
                   className="secondary-btn bg-white-97 hover:shadow-md hover:bg-white-99 transition-all"
                 >
-                  <a href="#">{<icon.icon />}</a>
+                  <a href="#" aria-label={icon.label}>
+                    {<icon.icon />}
+                  </a>
                 </button>
               ))}
             </div>

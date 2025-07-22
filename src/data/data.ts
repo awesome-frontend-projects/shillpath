@@ -289,14 +289,17 @@ export const contactInfo = [
 export const socialIcons = [
   {
     id: 1,
+    label: "Facebook",
     icon: RiFacebookBoxFill,
   },
   {
     id: 2,
+    label: "Twitter",
     icon: RiTwitterFill,
   },
   {
     id: 3,
+    label: "Linkedin",
     icon: RiLinkedinFill,
   },
 ];
