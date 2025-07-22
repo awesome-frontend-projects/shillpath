@@ -54,7 +54,7 @@ const AboutPageSec = () => {
 
                   {/* Card content */}
                   <div>
-                    <h4 className="mb-2">{item.title}</h4>
+                    <h3 className="mb-2">{item.title}</h3>
                     <p>{item.text}</p>
                   </div>
                 </motion.div>

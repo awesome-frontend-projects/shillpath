@@ -67,12 +67,14 @@ const CoursesPageSec = () => {
 
               {/* Steps */}
               <div className="mt-10">
-                <h4>{item.curriculum}</h4>
+                <h3>{item.curriculum}</h3>
                 <ul className="grid gap-8 mt-9 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-center">
                   {item.steps.map((item, index) => (
                     <li key={index}>
                       <div>
-                        <h2>{item.step}</h2>
+                        <h4 className="text-2xl md:text-3xl lg:text-4xl">
+                          {item.step}
+                        </h4>
                         <p>{item.label}</p>
                       </div>
                     </li>
