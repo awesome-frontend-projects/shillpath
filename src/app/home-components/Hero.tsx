@@ -10,7 +10,6 @@ import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animation";
 import { RiPlayFill } from "@remixicon/react";
 
 const Hero = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <section>
       <motion.div
@@ -67,10 +66,18 @@ const Hero = () => {
             variants={fadeInUp}
             className="mt-12 flex gap-3 items-center justify-center flex-wrap"
           >
-            <Link href="/courses" className="primary-btn max-sm:w-[80%]">
+            <Link
+              href="/courses"
+              className="primary-btn max-sm:w-[80%]"
+              aria-label="explore courses"
+            >
               Explore Courses
             </Link>
-            <Link href={"/pricing"} className="secondary-btn max-sm:w-[80%]">
+            <Link
+              href="/pricing"
+              className="secondary-btn max-sm:w-[80%]"
+              aria-label="view pricing"
+            >
               View Pricing
             </Link>
           </motion.div>
