@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
+import "lenis/dist/lenis.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NextTopLoader from "nextjs-toploader";
+import ReactLenis from "lenis/react";
 
 const beVietnamPro = Be_Vietnam_Pro({
   weight: ["400", "500", "600", "700"],
@@ -25,10 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={beVietnamPro.className}>
       <body>
-        <NextTopLoader showSpinner={false} color="#ff9500" />
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <ReactLenis root>
+          <NextTopLoader showSpinner={false} color="#ff9500" />
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ReactLenis>
       </body>
     </html>
   );
