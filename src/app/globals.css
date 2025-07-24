@@ -33,13 +33,13 @@ body {
 
 @layer utilities {
   .container {
-    @apply px-4 mx-auto sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1130px] 2xl:max-w-[1380px];
+    @apply px-4 mx-auto md:px-8 lg:px-14 2xl:max-w-screen-xl;
   }
   button {
     @apply cursor-pointer;
   }
   p {
-    @apply leading-normal text-sm sm:text-base lg:text-lg text-grey-30;
+    @apply leading-normal text-sm sm:text-base  text-grey-30 2xl:text-lg;
   }
   h1,
   h2,

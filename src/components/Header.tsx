@@ -69,7 +69,7 @@ const Header = () => {
                 <li key={item.id}>
                   <Link
                     href={item.href}
-                    className={`block text-lg font-medium hover:text-orange-50 transition-colors ${
+                    className={`block font-medium hover:text-orange-50 transition-colors ${
                       pathname === item.href ? "text-orange-50" : ""
                     }`}
                     onClick={handleClick}
