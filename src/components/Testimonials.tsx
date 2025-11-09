@@ -8,7 +8,7 @@ import Link from "next/link";
 
 //import swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Pagination, FreeMode } from "swiper/modules";
 
 // import swiper css
 import "swiper/css";
@@ -16,7 +16,7 @@ import { RiArrowLeftLine, RiArrowRightLine } from "@remixicon/react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeInUp, staggerContainer } from "@/lib/motion/animation";
 
 const Testimonials = () => {
   return (
@@ -39,7 +39,7 @@ const Testimonials = () => {
         {/* Card wrapper */}
         <motion.div variants={fadeInUp}>
           <Swiper
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation, Autoplay, Pagination, FreeMode]}
             breakpoints={{
               640: {
                 slidesPerView: 1,
@@ -55,6 +55,11 @@ const Testimonials = () => {
               prevEl: ".prev-btn",
               nextEl: ".next-btn",
             }}
+            pagination={{
+              clickable: true,
+            }}
+            freeMode={true}
+            loop={true}
             spaceBetween={30}
             autoplay={{
               delay: 3000,

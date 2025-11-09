@@ -8,7 +8,7 @@ interface titleProps {
 
 //import motion
 import { motion } from "motion/react";
-import { fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeInUp, staggerContainer } from "@/lib/motion/animation";
 
 const PageTitle = ({ title, text }: titleProps) => {
   return (

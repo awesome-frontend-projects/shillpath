@@ -4,7 +4,7 @@ import React from "react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeIn, fadeInUp, staggerContainer } from "@/lib/motion/animation";
 import { contactInfo, socialIcons } from "@/data/data";
 
 const ContactSec = () => {

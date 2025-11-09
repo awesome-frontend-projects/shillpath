@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import Marquee from "react-fast-marquee";
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeIn, fadeInUp, staggerContainer } from "@/lib/motion/animation";
 import { RiPlayFill } from "@remixicon/react";
 
 const Hero = () => {

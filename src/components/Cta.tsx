@@ -4,7 +4,7 @@ import React from "react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, staggerContainer } from "@/motion/animation";
+import { fadeIn, staggerContainer } from "@/lib/motion/animation";
 import Image from "next/image";
 
 const Cta = () => {

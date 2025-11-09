@@ -5,6 +5,7 @@ import Image from "next/image";
 import { RiArrowRightLine, RiCloseLine, RiMenuLine } from "@remixicon/react";
 import { navItems } from "@/data/data";
 import { usePathname } from "next/navigation";
+import { RemoveScroll } from "react-remove-scroll";
 
 const Header = () => {
   const pathname = usePathname();
@@ -42,62 +43,64 @@ const Header = () => {
           </Link>
 
           {/* Mobile Menu */}
-          <nav
-            className={`navbar ${isOpen ? "active" : ""}`}
-            aria-label="Main Navigation"
-            role="navigation"
-            id="mobile-navigation"
-          >
-            {/* wrapper */}
-            <div className="flex items-center justify-between">
-              <div>
-                <Image
-                  src="/images/logo.png"
-                  width={205}
-                  height={50}
-                  alt="Logo"
-                />
+          <RemoveScroll enabled={isOpen}>
+            <nav
+              className={`navbar ${isOpen ? "active" : ""}`}
+              aria-label="Main Navigation"
+              role="navigation"
+              id="mobile-navigation"
+            >
+              {/* wrapper */}
+              <div className="flex items-center justify-between">
+                <div>
+                  <Image
+                    src="/images/logo.png"
+                    width={205}
+                    height={50}
+                    alt="Logo"
+                  />
+                </div>
+                <button aria-label="close menu" onClick={handleClick}>
+                  <RiCloseLine size={30} aria-hidden="true" focusable="false" />
+                </button>
               </div>
-              <button aria-label="close menu" onClick={handleClick}>
-                <RiCloseLine size={30} aria-hidden="true" focusable="false" />
-              </button>
-            </div>
 
-            {/* List */}
-            <ul className="mt-8 grid gap-5 text-center ">
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={item.href}
-                    className={`block font-medium hover:text-orange-50 transition-colors ${
-                      pathname === item.href ? "text-orange-50" : ""
-                    }`}
-                    onClick={handleClick}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+              {/* List */}
+              <ul className="mt-8 grid gap-5 text-center ">
+                {navItems.map((item) => (
+                  <li key={item.id}>
+                    <Link
+                      href={item.href}
+                      className={`block font-medium hover:text-orange-50 transition-colors ${
+                        pathname === item.href ? "text-orange-50" : ""
+                      }`}
+                      onClick={handleClick}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
 
-            {/* Btn wrapper */}
-            <div className="mt-auto flex justify-around">
-              <Link
-                href="/signup"
-                aria-label="Sign up for an account"
-                className="primary-btn"
-              >
-                Sign Up
-              </Link>
-              <Link
-                href="/login"
-                aria-label="Log in to your account"
-                className="secondary-btn"
-              >
-                Login
-              </Link>
-            </div>
-          </nav>
+              {/* Btn wrapper */}
+              <div className="mt-auto flex justify-around">
+                <Link
+                  href="/signup"
+                  aria-label="Sign up for an account"
+                  className="primary-btn"
+                >
+                  Sign Up
+                </Link>
+                <Link
+                  href="/login"
+                  aria-label="Log in to your account"
+                  className="secondary-btn"
+                >
+                  Login
+                </Link>
+              </div>
+            </nav>
+          </RemoveScroll>
 
           {/* Lg Menu */}
           <div

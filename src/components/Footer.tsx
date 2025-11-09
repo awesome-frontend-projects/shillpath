@@ -3,7 +3,7 @@ import { contactInfo, footerLists, socialIcons } from "@/data/data";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeIn, fadeInUp, staggerContainer } from "@/lib/motion/animation";
 
 import Image from "next/image";
 import Link from "next/link";

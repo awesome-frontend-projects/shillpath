@@ -6,7 +6,7 @@ import React from "react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeInUp, staggerContainer } from "@/lib/motion/animation";
 import PageTitle from "@/components/PageTitle";
 
 const CoursesPageSec = () => {

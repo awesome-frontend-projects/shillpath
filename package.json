@@ -19,6 +19,7 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-player": "^3.1.0",
+    "react-remove-scroll": "^2.7.1",
     "swiper": "^11.2.10"
   },
   "devDependencies": {

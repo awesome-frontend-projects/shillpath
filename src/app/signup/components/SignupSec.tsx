@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, staggerContainer } from "@/motion/animation";
+import { fadeIn, staggerContainer } from "@/lib/motion/animation";
 
 const SignupSec = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);

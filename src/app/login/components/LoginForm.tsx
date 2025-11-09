@@ -7,13 +7,14 @@ import React, { useState } from "react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, staggerContainer } from "@/motion/animation";
+import { fadeIn, staggerContainer } from "@/lib/motion/animation";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const handleClick = () => {
     setShowPassword(!showPassword);
   };
+  const handleFormSubmit = (e) => e.preventDefault();
   return (
     <section className="pt-[100px]">
       <motion.div
@@ -33,7 +34,7 @@ const LoginForm = () => {
           </p>
 
           {/* form */}
-          <form action="#" className="mt-10">
+          <form action="#" className="mt-10" onSubmit={handleFormSubmit}>
             {/* Input wrapper */}
             <div className="grid gap-1.5">
               <label htmlFor="email" className="font-medium text-lg">
@@ -42,8 +43,12 @@ const LoginForm = () => {
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="bg-white-99 p-5 border border-white-95 rounded-lg focus:border-orange-70 transition text-grey-20"
+                className="bg-white-99 p-5 border border-white-95 rounded-lg focus:border-orange-70 transition text-grey-20 peer"
+                required
               />
+              <p className="text-red-600 invisible peer-invalid:visible">
+                Please provide a valid email address.
+              </p>
             </div>
             {/* Input wrapper */}
             <div className="grid gap-1.5 my-6">
@@ -53,7 +58,9 @@ const LoginForm = () => {
                   type={showPassword ? "text" : "password"}
                   placeholder="Enter your Password"
                   className="bg-white-99 p-5 border border-white-95 rounded-lg focus:border-orange-70 transition text-grey-20 w-full"
+                  required
                 />
+
                 <button
                   aria-label="show password"
                   className="absolute top-1/2 right-4 -translate-y-1/2 text-grey-30"
@@ -81,11 +88,17 @@ const LoginForm = () => {
             </Link>
 
             <div className="flex items-center gap-1.5 mb-6">
-              <input type="checkbox" id="check" className="accent-orange-700" />
+              <input
+                type="checkbox"
+                id="check"
+                className="accent-orange-700 checked:border-orange-50"
+              />
               <label htmlFor="check">Remember Me</label>
             </div>
 
-            <button className="primary-btn w-full">Login</button>
+            <button className="primary-btn w-full active:bg-orange-70">
+              Login
+            </button>
             {/* option */}
             <div className="flex items-center gap-3 my-8">
               <Divider />

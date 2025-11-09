@@ -4,7 +4,7 @@ import React from "react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeInUp } from "@/motion/animation";
+import { fadeInUp } from "@/lib/motion/animation";
 
 interface titleProps {
   title: string;

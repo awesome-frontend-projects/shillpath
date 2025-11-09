@@ -6,7 +6,7 @@ import { RiAddLine } from "@remixicon/react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeInUp, staggerContainer } from "@/lib/motion/animation";
 
 const FaqSec = () => {
   const [openId, setOpenId] = useState<null | number | string>(

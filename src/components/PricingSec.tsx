@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 //import motion
 import { motion } from "motion/react";
-import { fadeIn, fadeInUp, staggerContainer } from "@/motion/animation";
+import { fadeIn, fadeInUp, staggerContainer } from "@/lib/motion/animation";
 
 const PricingSec = () => {
   const [isMonthly, setIsMonthly] = useState<boolean>(false);
