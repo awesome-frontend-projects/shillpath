@@ -14,7 +14,8 @@ const LoginForm = () => {
   const handleClick = () => {
     setShowPassword(!showPassword);
   };
-  const handleFormSubmit = (e) => e.preventDefault();
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) =>
+    e.preventDefault();
   return (
     <section className="pt-[100px]">
       <motion.div
