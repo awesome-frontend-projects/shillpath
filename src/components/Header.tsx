@@ -22,7 +22,7 @@ const Header = () => {
         <div
           role="banner"
           aria-label="Free course announcement"
-          className="bg-orange-50 text-neutral-900 text-center flex items-center justify-center gap-3 rounded-md px-4 py-2.5 flex-wrap"
+          className="bg-orange-50 text-neutral-900 text-center items-center justify-center gap-3 rounded-md px-4 py-2.5 flex-wrap hidden lg:flex"
         >
           <a href="#" className="hover:underline text-sm">
             Free Courses 🌟 Sale Ends Soon, Get It Now
